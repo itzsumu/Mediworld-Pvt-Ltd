@@ -1,0 +1,142 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white; /* Set the default background */
+    color: black; /* For text readability */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header Section --- */
+header {
+    background-color: #62B560; /* MediWorld header green color */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 2rem; /* Spacing for the logo */
+}
+
+nav {
+    margin-right: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Space between menu items */
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #E4F1DB; /* Slightly lighter green on hover */
+}
+
+/* --- Inquiry Page Specific Styles --- */
+#inquiry {
+    padding: 100px 20px; /* Add space below the fixed header */
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa; /* Light gray form background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #62B560; /* MediWorld green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4b9d4b; /* Slightly darker green */
+}
+
+/* --- Footer Section --- */
+footer {
+    background-color: #62B560;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Styles for Smaller Screens --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    header .logo, nav ul {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
