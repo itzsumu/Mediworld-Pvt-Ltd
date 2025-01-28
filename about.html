@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,16 @@
 </head>
 <body>
     <header>
-        <!-- Your navigation bar here -->
+        <nav>
+            <div class="logo">Mediworld (Pvt) Ltd</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="inquiry.html">Product Inquiry</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="about">
@@ -21,41 +31,210 @@
                 <h2>Our History</h2>
                 <p>Established in [Year], MediWorld has a rich history of providing high-quality medical equipment.  [Insert a concise summary of key milestones and achievements, focusing on significant growth and innovation].</p>
             </div>
-
-            <div class="section-block">
-                <h2>Our Mission</h2>
-                <p>To empower healthcare professionals with cutting-edge medical technologies, enabling them to provide superior patient care.</p>
-            </div>
-
-            <div class="section-block">
-                <h2>Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="team-member1.jpg" alt="Team Member Name">
-                        <h3>Team Member Name</h3>
-                        <p>Job Title</p>
-                        <p>Brief description of their expertise and contributions.</p>
-                    </div>                    
+            <style>
+                /* Global Styles */
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+        
+                body {
+                    font-family: 'Arial', sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                }
+        
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 20px;
+                }
+        
+                /* About Section Styles */
+                .about-section {
+                    padding: 80px 0;
+                    background: linear-gradient(to right, #f8f9fa, #ffffff);
+                }
+        
+                .section-title {
+                    text-align: center;
+                    margin-bottom: 60px;
+                }
+        
+                .section-title h2 {
+                    font-size: 2.5em;
+                    color: #2c3e50;
+                    margin-bottom: 20px;
+                    position: relative;
+                    padding-bottom: 20px;
+                }
+        
+                .section-title h2::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 50px;
+                    height: 3px;
+                    background: #3498db;
+                }
+        
+                /* Team Section Styles */
+                .team-section {
+                    padding: 60px 0;
+                    background: #ffffff;
+                }
+        
+                .team-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 30px;
+                    padding: 20px;
+                }
+        
+                .team-member {
+                    background: #fff;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    position: relative;
+                }
+        
+                .team-member:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+                }
+        
+                .member-image {
+                    position: relative;
+                    overflow: hidden;
+                    height: 300px;
+                }
+        
+                .member-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+        
+                .team-member:hover .member-image img {
+                    transform: scale(1.1);
+                }
+        
+                .member-info {
+                    padding: 20px;
+                    text-align: center;
+                    background: white;
+                }
+        
+                .member-name {
+                    font-size: 1.2em;
+                    color: #2c3e50;
+                    margin-bottom: 5px;
+                }
+        
+                .member-position {
+                    color: #3498db;
+                    font-size: 0.9em;
+                    margin-bottom: 15px;
+                }
+        
+                .member-bio {
+                    font-size: 0.9em;
+                    color: #666;
+                    margin-bottom: 15px;
+                }
+        
+                .social-links {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    padding: 10px 0;
+                }
+        
+                .social-links a {
+                    color: #3498db;
+                    transition: color 0.3s ease;
+                }
+        
+                .social-links a:hover {
+                    color: #2980b9;
+                }
+        
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                    .team-grid {
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <section class="about-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Meet Our Team</h2>
+                        <p>The experienced professionals behind our success</p>
+                    </div>
+        
+                    <div class="team-grid">
+                        <!-- Team Member 1 -->
+                        <div class="team-member">
+                            <div class="member-image">
+                                <img src="Hosne Ara .png" alt="Team Member">
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">Hosne Ara Siraj</h3>
+                                <p class="member-position">Chief Executive Officer</p>
+                                <p class="member-bio">With over 15 years of experience in medical equipment industry.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Team Member 2 -->
+                        <div class="team-member">
+                            <div class="member-image">
+                                <img src="Sirajul Islam.png" alt="Team Member">
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">MD.Sirajul Islam</h3>
+                                <p class="member-position">Menager Director</p>
+                                <p class="member-bio">Specialized in medical equipment engineering and innovation.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Team Member 3 -->
+                        <div class="team-member">
+                            <div class="member-image">
+                                <img src="sharmin.png" alt="Team Member">
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">Dr.Sharmin Islam</h3>
+                                <p class="member-position">Director</p>
+                                <p class="member-bio">Expert in medical equipment sales and customer relations.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="section-block">
-                <h2>Our Values</h2>
-                <ul>
-                    <li>Integrity</li>
-                    <li>Innovation</li>
-                    <li>Customer Focus</li>
-                    <li>Excellence</li>
-                </ul>
-            </div>
-
-            <div class="section-block">
-                <h2>Testimonials</h2>
-                <div class="testimonial">
-                    <blockquote>"MediWorld's equipment has significantly improved our diagnostic capabilities and patient outcomes." - Dr. [Name], [Hospital Name]</blockquote>
-                </div>
-                <!-- Add more testimonials here -->
-            </div>
+            </section>
 
             <div class="section-block">
                 <h2>Contact Us</h2>
@@ -68,3 +247,4 @@
     </footer>
 </body>
 </html>
+Close
