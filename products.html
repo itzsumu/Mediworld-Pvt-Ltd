@@ -3,8 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mediworld Products</title>
+    <title>Our Products | MediWorld (Pvt) Ltd</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Default font */
+        }
+        /* Product Section */
+        #products {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .product-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-image img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .product-info h3 {
+            font-size: 1.5em;
+            color: #e7691d; /* Orange color */
+            margin: 10px 0;
+        }
+        .product-info p {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .product-price {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,54 +77,45 @@
             </ul>
         </nav>
     </header>
-        <style>
-            .product-card {
-                display: flex;
-                flex-direction: column; /* Stack items vertically */
-                align-items: center;     /* Center items horizontally */
-                width: 300px;
-                margin: 1rem; /* Add space between cards */
-                border: 1px solid #ccc;
-                padding: 1rem;
-                border-radius: 5px;
-            }
-    
-            .product-card img {
-                max-width: 100%;
-                height: auto;
-                margin-bottom: 1rem;
-            }
-    
-            /* Optional responsive styling */
-            @media (max-width: 768px) {
-                .product-card {
-                    width: 100%;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <!-- ... (same header as before) ... -->
-        <section id="products">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <a href="product-detail1.html">
-                    <div class="product-card">
-                        <img src="Gas Outlet.png" alt="Product 1">
-                        <h3>Product 1</h3>
-                        <p>Short description...</p>
-                    </div>
-                </a>
-    
-                <a href="product-detail2.html">
-                    <div class="product-card">
-                        <img src="Patient Monitor.png" alt="Product 2">
-                        <h3>Product 2</h3>
-                        <p>Short description...</p>
-                    </div>
-                </a>
-                <!-- Add more product cards here -->
+
+    <section id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Discover our range of high-quality medical equipment.</p>
             </div>
-        </section>    
+
+            <div class="product-grid">
+                <a href="product-detail1.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Patient Monitor.png" alt="Product 1">
+                        </div>
+                        <div class="product-info">
+                            <h3>Product 1</h3>
+                            <p>Short description...</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product-detail2.html" class="product-link">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Gas Outlet.png" alt="Product 2">
+                        </div>
+                        <div class="product-info">
+                            <h3>Product 2</h3>
+                            <p>Short description...</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Your footer here -->
+    </footer>
 </body>
 </html>
