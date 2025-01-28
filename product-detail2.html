@@ -5,19 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product 2 Details</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #product-detail {
+            padding: 80px 0;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+            overflow: hidden; /* For smooth animations */
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            animation: fadeIn 1s ease; /* Smooth fade-in animation */
+        }
+
+        .product-image {
+            width: 45%;
+            text-align: center; /* Center image */
+        }
+
+        .product-image img {
+            max-width: 100%; /* Ensure image doesn't overflow */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: block; /* Remove extra space below image */
+            animation: fadeIn 1s ease; /* Smooth fade-in animation */
+        }
+
+        .product-info {
+            width: 45%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease; /* Smooth fade-in-up animation */
+        }
+
+        .product-info h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .product-info p {
+            margin-bottom: 1rem;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .product-info strong {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .product-info ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .product-specs {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .product-specs dt {
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .product-image,
+            .product-info {
+                width: 90%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Same header as in index.html -->
+        <nav>
+            <div class="logo">Mediworld (Pvt) Ltd</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="inquiry.html">Product Inquiry</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="product-detail">
-        <h2>Product 2</h2>
-        <img src="Patient Monitor.png" alt="Product 2" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
-        <p><strong>Description:</strong> Detailed description of Product 2 goes here.  Add as much detail as you need!</p>
-        <p><strong>Price:</strong> $200</p>
-        <p><strong>Model:</strong> XYZ-456</p>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="Gas Outlet.png" alt="Product 2">
+            </div>
+            <div class="product-info">
+                <h2>Product 2</h2>
+                <p>This is a detailed description of Product 1. It highlights its key features and benefits, using clear and concise language to engage the reader.  The information is well-structured, making it easy for customers to quickly grasp the product's value proposition.</p>
+                <div class="product-specs">
+                    <dl>
+                        <dt>Price:</dt>
+                        <dd>$100</dd>
+                        <dt>Model:</dt>
+                        <dd>ABC-123</dd>
+                        <dt>Key Features:</dt>
+                        <dd>
+                            <ul>
+                                <li>Feature 1:  A detailed explanation of what this feature does and why it's beneficial.</li>
+                                <li>Feature 2:  Another detailed explanation with focus on benefits.</li>
+                                <li>Feature 3:  Yet another detailed explanation of a key feature.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <footer>
+        <!-- Your footer here -->
+    </footer>
 </body>
 </html>
+
