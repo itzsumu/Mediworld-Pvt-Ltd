@@ -5,6 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mediworld Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Contact Section Styles */
+        #contact {
+            padding: 80px 0;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+            overflow: hidden; /* For smoother animation */
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .section-title {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease; /* Animation for title */
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .contact-info {
+            width: 45%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease; /* Animation for contact info */
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1em;
+            line-height: 1.6; /* Better spacing */
+        }
+
+        .contact-info strong {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease; /* Smooth color transition on hover */
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: #2980b9; /* Slightly darker blue on hover */
+        }
+
+
+        #map-container {
+            width: 45%;
+            animation: fadeInUp 1s ease; /* Animation for map */
+        }
+
+        #map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-info, #map-container {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,17 +133,20 @@
     </header>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p><strong>Address:</strong> House no: 20,Road no: 03,Mohammadia Housing Society,Mohammadpur</p>
-            <p>Dhaka-1207,Bangladesh</p>
-            <p><strong>Email:</strong> <a href="mailto:info@medequippro.com">mediwrold_2008@yahoo.com</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/yourwhatsappnumber">+8801552417081</a></p>
-            <p><strong>WeChat:</strong> Your WeChat ID</p> </div>
-        </div>
-        <div id="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.083264257257!2d90.34560855239484!3d23.763719563867305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c09ffaffd459%3A0x8268e2507d87e477!2sMohammadia%20Housing%20Society%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1736872984129!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+        <div class="contact-container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you!</p>
+            </div>
+            <div class="contact-info">
+                <p><strong>Address:</strong> House no: 20, Road no: 03, Mohammadia Housing Society, Mohammadpur, Dhaka-1207, Bangladesh</p>
+                <p><strong>Email:</strong> <a href="mailto:mediwrold_2008@yahoo.com">mediwrold_2008@yahoo.com</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/+8801552417081">+8801552417081</a></p>
+                <p><strong>WeChat:</strong> Your WeChat ID</p>
+            </div>
+            <div id="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.083264257257!2d90.34560855239484!3d23.763719563867305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c09ffaffd459%3A0x8268e2507d87e477!2sMohammadia%20Housing%20Society%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1736872984129!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
 </body>
