@@ -1,0 +1,205 @@
+/* CSS Variables for easy customization */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --white: #fff;
+    --border-color: #ddd;
+    --font-family: 'Arial', sans-serif;
+  }
+  
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+  }
+  
+  /* Container Utility */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Header Styles */
+  .site-header {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .site-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .site-nav ul li a:hover,
+  .site-nav ul li a.active {
+    color: var(--primary-color);
+  }
+  
+  /* Footer Styles */
+  .site-footer {
+    background: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Products Listing Page Styles */
+  .products-section {
+    padding: 60px 0;
+  }
+  
+  .products-section h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 280px;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-info h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  /* Product Detail Page Styles */
+  .product-detail {
+    padding: 60px 0;
+  }
+  
+  .product-detail-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .product-detail-image {
+    flex: 1 1 400px;
+  }
+  
+  .product-detail-image img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .product-detail-info {
+    flex: 1 1 400px;
+  }
+  
+  .product-detail-info h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .product-detail-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .product-specs {
+    list-style: disc inside;
+    margin-bottom: 20px;
+  }
+  
+  .product-specs li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  /* Button Styles (used on product detail page) */
+  .btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .product-detail-content {
+      flex-direction: column;
+    }
+  }
+  

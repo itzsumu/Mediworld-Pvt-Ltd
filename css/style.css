@@ -1,0 +1,168 @@
+/* CSS Variables for easy customization */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --white: #fff;
+    --border-color: #ddd;
+    --font-family: 'Arial', sans-serif;
+  }
+  
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+  }
+  
+  /* Container Utility */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Header Styles */
+  .site-header {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .site-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .site-nav ul li a:hover,
+  .site-nav ul li a.active {
+    color: var(--primary-color);
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    background: var(--white);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    flex: 1 1 400px;
+  }
+  
+  .contact-info h2,
+  .contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: var(--primary-color);
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .map {
+    margin-top: 20px;
+    border: 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Contact Form Styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Footer Styles */
+  .site-footer {
+    background: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  }
+  
