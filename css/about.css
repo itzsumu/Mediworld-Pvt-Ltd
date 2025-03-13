@@ -194,3 +194,50 @@ p.lead {
 .section-block a:hover {
     text-decoration: underline;
 }
+
+/* Footer Styles */
+.site-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1em;
+}
+
+.site-footer h3 {
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  border: 2px solid rgb(175,159,159);
+  transition: background 0.3s, color 0.3s;
+}
+.social-icon i {
+  color: rgb(175, 159, 159); /* Change to white or any visible color */
+}
+
+
+.social-icon:hover {
+  background-color: black;
+  color: rgb(52, 47, 47);
+}
