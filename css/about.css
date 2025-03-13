@@ -60,12 +60,21 @@
   }
   
   .site-nav ul li a {
-    text-decoration: none;
     color: var(--text-color);
+    text-decoration: none;
     font-weight: 500;
     padding: 5px 10px;
     transition: color 0.3s ease;
-  }
+}
+
+.site-nav ul li a.active {
+  color: var(--primary-color);
+  font-weight: bold;
+  border-bottom: none; /* Remove the underline */
+  text-decoration: none; /* Ensure no text underline */
+}
+
+
   
   .site-nav ul li a:hover,
   .site-nav ul li a.active {
@@ -82,8 +91,8 @@
   
   /* About Section */
 #about {
-    margin-top: 100px; /* Avoid overlap with fixed header */
-    padding: 50px 0;
+    margin-top: 40px; /* Avoid overlap with fixed header */
+    padding: 20px 0;
 }
 
 h1, h2 {
@@ -101,7 +110,7 @@ p.lead {
 
 /* Team Section */
 .about-section {
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 .team-grid {
