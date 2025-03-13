@@ -203,3 +203,61 @@
     }
   }
   
+
+/*Infusion Pump */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*Syring Pump */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*Dual-channal Syringe Pump*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
