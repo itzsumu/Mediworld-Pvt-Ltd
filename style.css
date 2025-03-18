@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #111;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.site-header .logo a {
+  color: #00bcd4;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.site-nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.site-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.site-nav ul li a:hover, .site-nav ul li a.active {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('../images/hero-image.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards 0.5s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #008ba3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Products */
+.products, .about, .contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+}
