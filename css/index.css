@@ -29,18 +29,21 @@ body {
   padding: 20px 0;
 }
 
+/* Header Styles */
 .site-header {
   background: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 10px 0;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .logo a {
@@ -54,6 +57,7 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .site-nav ul li a {
@@ -69,6 +73,7 @@ body {
   color: var(--primary-color);
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   overflow: hidden;
@@ -115,6 +120,7 @@ body {
   background: var(--secondary-color);
 }
 
+/* Features Section */
 .features {
   text-align: center;
   padding: 50px 20px;
@@ -141,11 +147,12 @@ body {
   text-align: center;
 }
 
+/* Footer Styles */
 .site-footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 10px; /* Adjusted padding for mobile */
   font-size: 1em;
 }
 
@@ -166,7 +173,7 @@ body {
   text-decoration: none;
   font-size: 20px;
   color: black;
-  border: 2px solid rgb(175,159,159);
+  border: 2px solid rgb(175, 159, 159);
   transition: background 0.3s, color 0.3s;
 }
 
@@ -179,39 +186,33 @@ body {
   color: rgb(52, 47, 47);
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    max-width: 90%;
-    padding: 20px;
-  }
-
-  .features-grid {
-    flex-direction: column;
-  }
-
-  .feature {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .features h2 {
-    font-size: 1.5rem;
-  }
-}
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: center;
+  }
+
+  .site-nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 10px;
+  }
+
+  .site-nav ul li a {
+    padding: 5px; /* Adjust padding for mobile */
+  }
+
   .hero-content {
     max-width: 90%; /* Adjust width for mobile */
     padding: 20px; /* Adjust padding */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller font size for mobile */
   }
 
   .features-grid {
@@ -222,11 +223,37 @@ body {
     width: 100%; /* Full width for features */
   }
 
+  .site-footer {
+    padding: 15px 10px; /* Adjust padding for mobile */
+  }
+
+  .social-icons {
+    gap: 10px; /* Reduce gap for mobile */
+  }
+
+  .social-icon {
+    width: 35px; /* Reduce icon size for mobile */
+    height: 35px;
+    font-size: 18px; /* Reduce font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 1.8rem; /* Further reduce font size for very small screens */
   }
 
   .hero p {
-    font-size: 1rem; /* Smaller font size for mobile */
+    font-size: 0.9rem; /* Further reduce font size for very small screens */
+  }
+
+  .features h2 {
+    font-size: 1.5rem; /* Adjust heading size for very small screens */
+  }
+
+  .social-icon {
+    width: 30px; /* Further reduce icon size */
+    height: 30px;
+    font-size: 16px; /* Further reduce font size */
   }
 }
