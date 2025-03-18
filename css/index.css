@@ -30,20 +30,21 @@ body {
 }
 
 /* Header Styles */
+/* Header Styles */
 .site-header {
   background: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 10px 0; /* Adjust padding for mobile */
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .logo a {
@@ -56,8 +57,8 @@ body {
 .site-nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 10px; /* Reduce gap for mobile */
+  flex-wrap: wrap; /* Allow nav items to wrap */
 }
 
 .site-nav ul li a {
@@ -68,10 +69,23 @@ body {
   transition: color 0.3s ease;
 }
 
-.site-nav ul li a:hover,
-.site-nav ul li a.active {
-  color: var(--primary-color);
+/* Mobile Styles for Header */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: center;
+  }
+
+  .site-nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 5px; /* Reduce gap further */
+  }
+
+  .site-nav ul li a {
+    padding: 5px; /* Adjust padding for mobile */
+  }
 }
+
 
 /* Hero Section */
 .hero {
@@ -148,30 +162,38 @@ body {
 }
 
 /* Footer Styles */
+/* Footer Styles */
 .site-footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 20px 10px; /* Adjusted padding for mobile */
+  padding: 20px 10px; /* Adjust padding for mobile */
   font-size: 1em;
+}
+
+.site-footer h3 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px; /* Reduce gap for mobile */
   margin-top: 10px;
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
+  width: 35px; /* Reduce icon size for mobile */
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px; /* Reduce font size for mobile */
   color: black;
   border: 2px solid rgb(175, 159, 159);
   transition: background 0.3s, color 0.3s;
@@ -185,6 +207,28 @@ body {
   background-color: black;
   color: rgb(52, 47, 47);
 }
+
+/* Mobile Styles for Footer */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 15px 10px; /* Adjust padding for mobile */
+  }
+
+  .site-footer h3 {
+    font-size: 1.2em; /* Reduce font size for mobile */
+  }
+
+  .social-icons {
+    gap: 8px; /* Reduce gap further */
+  }
+
+  .social-icon {
+    width: 30px; /* Further reduce icon size */
+    height: 30px;
+    font-size: 16px; /* Further reduce font size */
+  }
+}
+  
 
 /* Mobile Styles */
 @media (max-width: 768px) {
