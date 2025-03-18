@@ -101,7 +101,7 @@ body {
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto;
   background: rgba(207, 205, 205, 0.6); /* Slightly dark background for readability */
   padding: 20px;
@@ -196,6 +196,7 @@ body {
   text-align: center;
   padding: 20px 0;
   font-size: 1em;
+  max-width:100%;
 }
 
 .site-footer h3 {
