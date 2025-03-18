@@ -207,3 +207,26 @@ body {
     font-size: 1.5rem;
   }
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 90%; /* Adjust width for mobile */
+    padding: 20px; /* Adjust padding */
+  }
+
+  .features-grid {
+    flex-direction: column; /* Stack features vertically */
+  }
+
+  .feature {
+    width: 100%; /* Full width for features */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+}
