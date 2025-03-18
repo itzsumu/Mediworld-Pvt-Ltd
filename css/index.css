@@ -242,10 +242,26 @@ body {
     grid-template-columns: 1fr;
   }
 }
-@media only screen and (max-width: 600px) {
-    /* Styles for mobile devices */
+
+/* Mobile-first styles */
+.container {
+    width: 100%;
+    padding: 1em;
 }
 
+/* Media queries for larger screens */
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 60%;
+    }
+}
 
 
 
