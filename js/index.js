@@ -30,5 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     showImage(currentImage); // Show the first image
     setInterval(nextImage, 5000); // Start the slideshow
   });
-  
+  // Toggle Mobile Menu
+document.getElementById('mobile-menu').addEventListener('click', function() {
+  const nav = document.querySelector('.site-nav');
+  nav.classList.toggle('active');
+});
   
