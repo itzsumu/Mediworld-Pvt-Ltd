@@ -31,5 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-  
+  // Toggle Mobile Menu
+document.getElementById('mobile-menu').addEventListener('click', function() {
+  const nav = document.querySelector('.site-nav');
+  nav.classList.toggle('active');
+});
   
