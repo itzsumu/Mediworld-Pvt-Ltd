@@ -238,47 +238,77 @@ body {
 }
 
 
-/* Responsive Styles for Header and Footer */
+/* Responsive Header Styles */
+.site-header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.site-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-  /* Header Styles */
-  .header-container {
+  .site-nav {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
 
-  .logo a {
-    font-size: 20px; /* Reduced font size for mobile */
+  .site-nav.active {
+    display: flex;
   }
 
   .site-nav ul {
     flex-direction: column;
-    gap: 10px; /* Reduced gap for mobile */
+    gap: 10px;
+    padding: 20px;
   }
 
-  .site-nav ul li a {
-    padding: 5px 0; /* Adjusted padding for mobile */
+  .menu-toggle {
+    display: flex;
   }
-
-  /* Footer Styles */
-  .site-footer {
-    padding: 15px 0; /* Reduced padding for mobile */
-  }
-
-  .site-footer h3 {
-    font-size: 1.2em; /* Reduced font size for mobile */
-  }
-
-  .social-icons {
-    gap: 10px; /* Reduced gap for mobile */
-  }
-
-  .social-icon {
-    width: 35px; /* Reduced size for mobile */
-    height: 35px;
-    font-size: 18px; /* Reduced font size for mobile */
-  }
-}
-width:100%
-overflow-x:hidden;
-}
 }
