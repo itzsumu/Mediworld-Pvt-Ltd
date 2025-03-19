@@ -202,10 +202,29 @@ body {
   color: rgb(52, 47, 47);
 }
 
-
-/* Responsive Styles */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-  .contact-container {
+  .site-nav {
+    display: none;
     flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .site-nav.active {
+    display: flex;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 }
